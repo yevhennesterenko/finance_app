@@ -1,0 +1,16 @@
+<h1>Reports</h1><br>
+
+<form action="report_by_dates">
+ <label for = "start_date">From:</label>
+ <input type="date" id="start_date" name="start_date"><br><br>
+ <label for = "end_date">To:</label>
+ <input type="date" id="end_date" name="end_date"><br><br>
+ <label for = "category_id">Category:</label>
+ <select id="category_id" name="category_id">
+    <%= Category.all.each do |category| %>
+      <option value="<%= category.id %>"><%= category.name %></option>
+    <% end %>
+ </select><br><br>
+ <input class="btn btn-outline-secondary" type="submit" value="Report by dates">
+ <input class="btn btn-outline-secondary" type="submit" formaction="report_by_category" value="Report by categories">
+</form>

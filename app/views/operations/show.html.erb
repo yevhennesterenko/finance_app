@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @operation %>
+
+<div>
+  <%= link_to "Редагувати цю статтю витрат", edit_category_operation_path(@category, @operation) %> |
+  <%= link_to "Повернутись до переліку витрат", category_operations_path %>
+
+  <%= button_to "Видалити цю статтю витрат", [@category, @operation], method: :delete %>
+</div>
